@@ -2,6 +2,8 @@ ja:
   activerecord:
     models:
       book: 本
+      user: ユーザー
+      navbar: ナビゲーションバー
 
     attributes:
       book:
@@ -9,3 +11,18 @@ ja:
         memo: メモ
         picture: 画像
         title: タイトル
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード(確認用)
+        postal_code: 郵便番号
+        address: 住所
+        introduction: 自己紹介
+      navbar: 
+        logged_in_as: "ログイン中のユーザー: %{email}"
+        edit_profile: "プロフィール編集"
+        logout: "ログアウト"
+        signup: "サインアップ"
+        login: "ログイン"
+
