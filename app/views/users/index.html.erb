@@ -1,0 +1,27 @@
+<%= link_to t('views.common.link', name: Book.model_name.human.downcase), books_path %>
+
+<h1><%= t('views.common.title_index', name: i18n_pluralize(User.model_name.human)) %></h1>
+
+<table class="table-style">
+  <thead>
+    <tr>
+      <th><%= User.human_attribute_name(:email) %></th>
+      <th><%= User.human_attribute_name(:postal_code) %></th>
+      <th><%= User.human_attribute_name(:address) %></th>
+      <th><%= User.human_attribute_name(:introduction) %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.postal_code %></td>
+        <td><%= user.address %></td>
+        <td><%= user.introduction %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @users %>
