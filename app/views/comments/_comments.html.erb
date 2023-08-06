@@ -7,7 +7,7 @@
           <div class="comment-item">
             <%= comment.content %>
             <div class="comment-author">
-              <%= comment.user.name.present? ? comment.user.name : comment.user.email %> 
+              <%= comment.user.name.present? ? comment.user.name : comment.user.email %>
               <%= comment.created_at %>
             </div>
             <% if comment.user == current_user %>
