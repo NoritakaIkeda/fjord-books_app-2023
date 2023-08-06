@@ -1,0 +1,38 @@
+.comments-container {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .comments-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .comment-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+  
+  .comment-author {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .edit-link,
+  .delete-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .edit-link:hover,
+  .delete-link:hover {
+    text-decoration: underline;
+  }
+  
+  .no-comments {
+    color: #999;
+    font-style: italic;
+  }

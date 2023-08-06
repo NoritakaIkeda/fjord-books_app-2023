@@ -6,4 +6,11 @@ Rails.application.routes.draw do
   resources :books
   resources :users, only: %i(index show)
   resources :reports
+  resources :comments, only: :destroy
+  resources :books do
+    resources :comments, only: :create, module: :books
+  end
+  resources :reports do
+    resources :comments, only: :create, module: :reports
+  end
 end

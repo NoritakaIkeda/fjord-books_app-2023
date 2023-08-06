@@ -1,0 +1,23 @@
+<div class="comments-container">
+  <strong><%= Comment.model_name.human %>:</strong>
+  <% if comments.any? %>
+    <ul class="comments-list">
+      <% comments.each do |comment| %>
+        <% if comment.persisted? %>
+          <div class="comment-item">
+            <%= comment.content %>
+            <div class="comment-author">
+              <%= comment.user.name.present? ? comment.user.name : comment.user.email %> 
+              <%= comment.created_at %>
+            </div>
+            <% if comment.user == current_user %>
+              <%= button_to t('activerecord.comments.form.delete'), [comment], method: :delete %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </ul>
+  <% else %>
+    <p class="no-comments"><%= t('activerecord.comments.form.no_comments') %></p>
+  <% end %>
+</div>
